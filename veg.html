@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCuisine</title>
+    <style type="text/css">
+        li a:hover {
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+
+        }
+
+        li {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        li>a {
+            color: white;
+            text-decoration: none;
+        }
+        .top-text{
+    height:70px;
+    width:100%;
+    top:10px;
+    display:flex;
+    justify-content: space-around;
+
+}
+
+   .logo{
+    font-size: 30px;
+    color: rgb(246, 252, 246);
+    font-family: cursive;
+    text-shadow: 2px 2px 5px black;
+    z-index: 1;    padding-top: 8px;
+
+   }
+   .top-text li{
+    font-size: 20px;
+    text-shadow: 5px 5px 10px black;
+    color: white;
+    z-index: 1;
+   }
+   .bcolor{
+       position: absolute;
+       height:70px;
+    width:100%;
+    background-color: black;
+    margin-left: 0px;
+   }
+  h2{
+      font-weight: 400;
+      text-shadow: 2px 2px 8px rgb(128, 128, 128);
+  }
+   h2>input{
+border-radius: 8px;
+border:solid 1px;
+border: none;
+font-size:16px ;
+width:180px;height:30px ;
+background-color: white; 
+box-shadow: 2px 2px 5px black;  }
+div>input{
+    border-radius: 9px;
+border:solid 1px;
+border: none;
+font-size:16px ;
+width:180px;height:30px ;
+background-color: rgb(63, 63, 63);
+border:none;
+margin-top: 20px;
+color:white;
+}
+div>input::placeholder{
+    margin-left: 10px;
+    color:rgb(204, 199, 199);
+}
+.disp{
+    display:flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.clicknext{
+    text-decoration: none;
+    color:black;
+}
+.recipe{
+    height: 370px;
+    width:280px;
+    box-shadow: 3px 3px 7px black;
+    transition:all 0.6s linear 0s;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.recipe:hover{
+    transform: scale(1.1);
+    
+}
+.recipe>img{
+    height:290px;
+    width:280px;
+    border-radius: 5px;
+    
+}
+h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+dl{
+    color:gray;
+    text-align: center;
+
+}
+    </style>
+    <script>
+        function check() {
+    // Get user input
+    var userInput = document.getElementById("ch").value;
+
+    // Convert user input to a number
+    var filterNumber = parseFloat(userInput);
+
+    // Get all elements with class 'filterable'
+    var divs = document.getElementsByClassName("recipe");
+
+    // Iterate through each div and check the data-number attribute
+    for (var i = 0; i < divs.length; i++) {
+        var dataNumber = parseFloat(divs[i].getAttribute("data-number"));
+
+        // Show or hide div based on the condition
+        if (!isNaN(dataNumber) && dataNumber <= filterNumber) {
+            divs[i].style.display = "block";
+        } else {
+            divs[i].style.display = "none";
+        }
+    }
+}
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.recipe');
+let l = document.getElementsByTagName('h3');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('h3')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+</script>
+</head>
+
+<body>
+
+
+    <div class="bcolor">
+    <div class="top-text">
+        <div class="logo">
+            QuickCuisine
+        </div>
+        <div><input type="text" name="" id="find" placeholder="search recipes" onkeyup="search()"></div>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="veg.html">Veg</a>
+                </li>
+                <li>
+                    <a href="nonveg.html">NonVeg</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div style="background-color:beige;height:100px;width:100%;padding:15px;
+font-size:20px;font-family:sans-serif;display: flex;justify-content:space-around;
+border-radius: 3px;">
+<div><h2>Looking for meals that align with your calorie goals?<br>
+    Don't worry we got you!</h2></div>
+   <div ><h2><input type="number" placeholder="Enter max calories"  id="ch" />
+    <button type="submit" onclick="check();" 
+    style="border-radius: 7px;border:none;height:30px;box-shadow: 2px 2px 5px black;">Submit</button>
+   </h2>
+</div> 
+</div>
+    <br><div class="disp">
+<a class="clicknext" href="paneer.html">
+    <div data-number="300" class="recipe">
+      <img src="paneer.jpeg"/>
+      <h3 >Paneer Masala</h3>
+      <dl>300 calories:35 min</dl>
+    </div></a>
+    <a class="clicknext" href="vada.html">
+        <div data-number="155" class="recipe">
+          <img src="vada.webp"/>
+          <h3 >Vada</h3>
+          <dl>155 calories:30 min</dl>
+        </div></a><a class="clicknext" href="bhaigan.html">
+        <div data-number="120" class="recipe">
+                    <img src="bhaiganbhartha.webp"/>
+                    <h3 >Baingan Bharta</h3>
+                    <dl>120 calories:1 hour</dl>                               
+         </div></a>
+         <a class="clicknext" href="pulav.html">
+         <div data-number="240" class="recipe">
+            <img src="pulav.jpeg"/>
+            <h3 >Pulav</h3>
+            <dl>240 calories:40mins</dl>                               
+ </div>
+</a>
+
+</div>
+<br>
+<div class="disp">
+    <a class="clicknext" href="pavbhaji.html">
+        <div  data-number="551" class="recipe">
+            <img src="pavbhaji.jpeg"/>
+            <h3 >Pav Bhaji</h3>
+            <dl>554 calories:45 mins</dl>
+        </div>
+    </a>
+    <a class="clicknext" href="poori.html">
+        <div  data-number="748" class="recipe">
+            <img src="poori.jpeg"/>
+            <h3 >Poori Bhaji</h3>
+            <dl>748 calories:45 mins</dl>
+        </div>
+    </a><a class="clicknext" href="gobi.html">
+            <div data-number="550" class="recipe">
+                        <img src="gobi.webp"/>
+                        <h3 >Gobi Manchurian</h3>
+                        <dl>550 calories:50 min</dl>                               
+             </div></a>
+             <a class="clicknext" href="rajma.html">
+             <div data-number="500" class="recipe">
+                <img src="rajma.webp"/>
+                <h3 >Rajma Chawal</h3>
+                <dl>500 calories:40mins</dl>                               
+     </div>
+    </a>
+    </div>
+</body>
+</html>

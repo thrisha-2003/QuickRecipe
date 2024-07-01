@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCuisine</title>
+    <style type="text/css">
+        body{
+            background-image: url('backcol.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        li a:hover {
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+
+        }
+
+        li {
+            display: inline-block;
+            padding: 8px;
+        }
+
+        li>a {
+            color: white;
+            text-decoration: none;
+        }
+        .top-text{
+    height:70px;
+    width:100%;
+    top:10px;
+    display:flex;
+    justify-content: space-around;
+
+}
+
+   .logo{
+    font-size: 30px;
+    color: rgb(246, 252, 246);
+    font-family: cursive;
+    text-shadow: 2px 2px 5px black;
+    z-index: 1;    padding-top: 8px;
+
+   }
+   .top-text li{
+    font-size: 20px;
+    text-shadow: 5px 5px 10px black;
+    color: white;
+    z-index: 1;
+   }
+   .bcolor{
+       position: absolute;
+       height:70px;
+    width:100%;
+    background-color: black;
+   }
+   .tips-top{
+       display:flex;
+       align-items: center;
+       justify-content: center;
+       width:820px;
+       height:330px;
+       background-color: whitesmoke;
+       box-shadow: 3px 3px 7px black;border-radius: 5px;
+       
+   }
+   .tip-recipe img{
+    height:300px;
+       width:400px;
+       border-radius: 10px;
+   }
+   .tip-recipe h1,h2{
+       padding-left: 10px;
+       padding-bottom:0px;
+       font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 500;
+   }
+   .tip-recipe p{
+       padding-left: 10px;
+       font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 300;
+   }
+   .tip-recipe{
+       height:300px;
+       width:400px;
+   }
+   .animate{
+       animation:bounce 0.9s infinite;
+   }
+   @keyframes bounce{
+       10%{
+           height:200px;
+           width:200px;
+       }
+       30%{
+           height:200px;
+           width:205px;
+       }
+       50%{
+           height:190px;
+           width:210px;
+           transform: translateY(70px);
+       }
+       75%{
+           height:200px;
+           width:205px;
+       }
+   }
+   .tips-top.second{
+       float:left;
+   }
+   .tip2{
+    height:233px;
+       width:600px;
+       box-shadow: 3px 3px 7px black;
+       background-color: whitesmoke;
+   }
+   .tip2 h2{
+       padding-left: 10px;
+       padding-bottom:0px;
+       font-size: 25px;
+        font-family: sans-serif;
+        font-weight: 500;
+   }
+   .tip2 p{
+       padding-left: 20px;
+       font-size: 20px;
+        font-family: sans-serif;
+        font-weight: 300;
+   }
+   
+    </style>
+</head>
+
+<body>
+
+
+    <div class="bcolor">
+    <div class="top-text">
+        <div class="logo">
+            QuickCuisine
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="veg.html">Veg</a>
+                </li>
+                <li>
+                    <a href="nonveg.html">NonVeg</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br><br><br>
+    <div style="display:flex"><div class="tips-top">
+        <div class="tip-recipe"><img src="eggpeeling.webp" /></div>
+        <div class="tip-recipe"><h1>Easy Peel Hard-Boiled Eggs:</h1>
+        <p>The "Easy Peel Hard-Boiled Eggs" hack involves a simple 
+            trick to make the peeling process smoother, reducing the chances of the egg whites sticking to the shell. 
+            Start with fresh eggs. Older eggs tend to be easier to peel than very fresh ones. 
+            If possible, use eggs that have been in your refrigerator for a few days.
+            Add a teaspoon of baking soda to the water when boiling eggs to make them easier to peel.</p></div>
+        
+    </div><div  class="animate" style="height:200px;width:200px;border-radius:100px;font-size:45px;
+    margin:auto;text-align:center;font-family:sans-serif;background-color: whitesmoke;
+       box-shadow: 3px 3px 7px black;font-weight: 300;text-shadow: 2px 2px 7px rgb(96, 93, 93);
+       "><dl>Tips and Tricks</dl></div></div><br>
+       
+<div style="margin:auto;" class="tips-top">
+    <div class="tip-recipe"><img src="banana.webp" /></div>
+    <div class="tip-recipe"><h2>Quick Ripening of Bananas</h2>
+    <p>Start with unripe bananas that are still firm and yellow or green. 
+        Put unripe bananas in a paper bag. The paper bag helps to concentrate ethene gas 
+        around the bananas, promoting faster ripening.Fold the top of paper bag and close it, trapping ethene gas inside. 
+        The enclosed space allows ethene to work more effectively on unripe bananas.
+        Leave the bag undisturbed for approximately 24 hours. 
+    </p></div>
+    </div>
+    <br>
+<div style="display:flex;justify-content: space-around;">
+    <div class="tip2"><img style="float:left;height:220px;width:220px;border-radius: 110px;
+        padding-right: 10px;"src="frozengrapes.jpeg" alt="grapes"/>
+    <h2>Frozen Grapes as Ice Cubes:
+
+    </h2>
+<p>
+    When you're ready to serve a cold drink, take a handful of frozen grapes and use them as "ice cubes." Drop them directly into your glass.
+    Sip your drink and enjoy the chilled grapes that subtly infuse a hint of flavor without watering down your beverage.
+
+</p></div>
+<div class="tip2"><img style="float:left;height:220px;width:220px;border-radius: 110px;
+    padding-right: 10px;"src="garlic.webp" alt="garlic"/>
+<h2>Easy Garlic Peeling
+
+</h2>
+<p>
+    Microwave the garlic cloves on high for about 15 seconds. The goal is not to cook 
+    the garlic but to create a little heat and moisture to loosen the skin.Using your fingers or a garlic press, 
+    apply gentle pressure to one end of the garlic clove.
+</p></div>
+</div><BR>
+    
+</body>
+</html>

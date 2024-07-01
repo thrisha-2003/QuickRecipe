@@ -1,0 +1,93 @@
+
+.top-image{
+    background-image: url('top.webp');
+    background-position: center;
+    background-size: cover;
+    filter:blur(3px);
+    height:400px;
+}
+ 
+.top-text{
+    height:150px;
+    width:100%;
+    position:absolute;
+    top:10px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.logo{
+    font-size: 30px;
+    color: rgb(246, 252, 246);
+    font-family: cursive;
+    text-shadow: 2px 2px 5px black;
+    z-index: 1;
+}
+.top-text li{
+    font-size: 20px;
+    text-shadow: 5px 5px 10px black;
+    color: white;
+    z-index: 1;
+
+}
+.head{
+    color:rgb(255, 255, 255);
+    position: absolute;
+    top:180px;
+    left:280px;
+    font-size: 70px;
+    text-shadow: 5px 5px 10px black;
+font-family: sans-serif;
+font-weight: 400;
+    letter-spacing: 2px;
+}
+h1{
+    font-family: sans-serif;
+font-size: 40px;
+font-weight: 400;
+color: rgb(88, 29, 29);
+}
+hr{
+    width: 240px;
+margin-left: 10px;
+}
+.recipe{
+    height: 370px;
+    width:280px;
+    box-shadow: 3px 3px 7px black;
+    transition:all 0.6s linear 0s;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.recipe:hover{
+    transform: scale(1.1);
+    
+}
+.recipe>img{
+    height:290px;
+    width:280px;
+    border-radius: 5px;
+    
+}
+h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+dl{
+    color:gray;
+    text-align: center;
+
+}
+.disp{
+    display:flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.clicknext{
+    text-decoration: none;
+    color:black;
+}
